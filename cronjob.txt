@@ -1,0 +1,4 @@
+* * * * * /bin/bash -c '/Users/gursidhsandhu/Documents/BCIT/Bachelors/Term\ 2/COMP\ 8003/Assignment\ 6/source/src/script.sh --check > /dev/null 2>&1'
+
+*/2 * * * * /bin/bash -c 'echo "Report executed at: $(date)" >> /Users/gursidhsandhu/Desktop/report_log.txt && /Users/gursidhsandhu/Documents/BCIT/Bachelors/Term\ 2/COMP\ 8003/Assignment\ 6/source/src/script.sh --report > /dev/null 2>&1 && if grep -q "No changes were found, /etc directory is safe!" /Users/gursidhsandhu/Desktop/integrity_report.txt; then echo "No changes" >> /Users/gursidhsandhu/Desktop/report_log.txt; else cat /Users/gursidhsandhu/Desktop/integrity_report.txt >> /Users/gursidhsandhu/Desktop/report_log.txt; fi'
+
